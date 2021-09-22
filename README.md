@@ -58,12 +58,12 @@ cd FacialKeypointDetection
 	pip install torchvision
 	```
 
-6. Install a few required pip packages, which are specified in the requirements text file (including OpenCV).
+4. Install a few required pip packages, which are specified in the requirements text file (including OpenCV).
 ```
 pip install -r requirements.txt
 ```
 
-7. To run the facial keypoint detector on an image of your choice, place the image in the ```images/``` directory. And, then run the detector using
+5. To run the facial keypoint detector on an image of your choice, place the image in the ```images/``` directory. And, then run the detector using
 ```
 python predict.py name_of_file
 ```
