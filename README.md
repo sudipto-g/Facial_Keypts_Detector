@@ -19,14 +19,12 @@ __Notebook 1__ : Loading and Visualizing the Facial Keypoint Data
 
 __Notebook 2__ : Defining and Training a Convolutional Neural Network (CNN) to Predict Facial Keypoints
 
-__Notebook 3__ : Facial Keypoint Detection Using Haar Cascades and your Trained CNN
-
-__Notebook 4__ : Facial Filters and Keypoint Uses
+Facial Filters and Keypoint Uses
 
 
 
 
-### usage Instructions
+### Usage Instructions
 
 1. Clone the repository, and navigate to the downloaded folder. 
 ```
@@ -65,6 +63,11 @@ cd FacialKeypointDetection
 pip install -r requirements.txt
 ```
 
+7. To run the facial keypoint detector on an image of your choice, place the image in the ```images/``` directory. And, then run the detector using
+```
+python predict.py name_of_file
+```
+Please note that while supplying the name of the image, you need to mention the extension too. For eg: ```python predict.py beatles.jpg``` is valid usage. 
 
 ### Data
 

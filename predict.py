@@ -1,18 +1,21 @@
-#########path to image - change this to get predictions on different image##########
-image_path = 'images/beatles.jpg'
-####################################################################################
-
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
+import sys
 
-def show_all_keypoints(image, predicted_key_pts):
+if(len(sys.argv)!=2):
+    print("USAGE: python3 predict.py image_file\n")
+    sys.exit(0)
+
+image_path = 'images/'+str(sys.argv[1])
+
+def show_all_keypoints(image, predicted_key_pts, i):
     """To show image with predicted keypoints"""
     # image is grayscale
     plt.figure()
     plt.imshow(image, cmap='gray')
     plt.scatter(predicted_key_pts[:, 0], predicted_key_pts[:, 1], s=5, marker='.', c='m')
-    plt.title('Detected KeyPoints')
+    plt.title('Detected KeyPoints for ROI {}'.format(i+1))
 
 # loading in color image for face detection
 image = cv2.imread(image_path)
@@ -54,6 +57,7 @@ net.load_state_dict(torch.load('keypoints_model.pt'))
 
 image_copy = np.copy(image)
 
+i=0
 # looping over the detected faces from haar cascade
 for (x,y,w,h) in faces:
     
@@ -97,5 +101,6 @@ for (x,y,w,h) in faces:
     keypoints = keypoints * (width_roi / 96, height_roi / 90) # scaling the keypoints to match the size of the output display. 
      
     # Using helper function for display as defined previously.  
-    show_all_keypoints(roi_copy, keypoints)
+    show_all_keypoints(roi_copy, keypoints, i)
     plt.show()
+    i+=1
