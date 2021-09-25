@@ -28,21 +28,21 @@ Facial Filters and Keypoint Uses
 
 1. Clone the repository, and navigate to the downloaded folder. 
 ```
-git clone https://github.com/sudipto-g/FacialKeypointDetection.git
-cd FacialKeypointDetection
+git clone https://github.com/sudipto-g/Facial_Keypts_Detector.git
+cd Facial_Keypts_Detector
 ```
 
-2. Create (and activate) a new environment, named `cv-nd` with Python 3.6. If prompted to proceed with the install `(Proceed [y]/n)` type y.
+2. Create (and activate) a new environment, named `key-pt`. If prompted to proceed with the install `(Proceed [y]/n)` type y.
 
 	- __Linux__ or __Mac__: 
 	```
-	conda create -n cv-nd python=3.6
-	source activate cv-nd
+	conda create -n key-pt
+	source activate key-pt
 	```
 	- __Windows__: 
 	```
-	conda create --name cv-nd python=3.6
-	activate cv-nd
+	conda create --name key-pt
+	activate key-pt
 	```
 	
 
@@ -72,4 +72,4 @@ Please note that while supplying the name of the image, you need to mention the 
 ### Data
 
 All of the data needed to train a neural network is in the FacialKeypointDetection repo, in the subdirectory `data`.  
-In this folder are training and tests set of image/keypoint data, and their respective csv files. 
+In this folder are training and tests set of image/keypoint data, and their respective csv files.  
