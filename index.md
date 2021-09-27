@@ -10,5 +10,16 @@ This is my attempt at building a Facial Key Points Detector.  Facial keypoints i
 
 
 ## A Quick Demo
-This is an example of my Facial Keypoint Detector being applied to my own image :p  
+
+The input image:
+![Input Image](Figure_1.png){:class="img-responsive"}
+
+The detected faces (Haar Casacde detects some aberrant faces)
+![Detected Faces](Figure_3.png){:class="img-responsive"}
+
+And then, finally, the detected keypoints of my own face:
+![Detected Keypoints](Figure_2.png){:class="img-responsive"}
+
+
+Thus, this is an example of my Facial Keypoint Detector being applied to my own image :p  
 Pretty, ain't it!? XD  
