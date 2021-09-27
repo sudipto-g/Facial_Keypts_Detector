@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+## Facial Key Points Detector
 
-You can use the [editor on GitHub](https://github.com/sudipto-g/Facial_Keypts_Detector/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is my attempt at building a Facial Key Points Detector.  Facial keypoints include points around the eyes, nose, and mouth on a face and are used in many applications. These applications include: facial tracking, facial pose recognition, facial filters, and emotion recognition.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## The Pipeline
+1. Given a picture, faces in it are detected using a [Haar-Cascade](https://towardsdatascience.com/face-detection-with-haar-cascade-727f68dafd08)
+2. Next, on each of the localised faces, some cropping, standardisation, normalisation and resizing techniques are applied before presenting it to the facial key point recogniser.
+3. The keyoint recogniser runs a CNN to warp the image and maps it to 68 key points.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sudipto-g/Facial_Keypts_Detector/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## A Quick Demo
+This is an example of my Facial Keypoint Detector being applied to my own image :p  
+Pretty, ain't it!? XD  
